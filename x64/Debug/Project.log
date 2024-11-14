@@ -20,10 +20,17 @@ C:\Users\ahmedmohamedc45\source\repos\Project\Project\clsString.h(376,22): warni
 C:\Users\ahmedmohamedc45\source\repos\Project\Project\clsBankClient.h(31,65): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
   (compiling source file 'Project.cpp')
   
+C:\Users\ahmedmohamedc45\source\repos\Project\Project\clsBankClient.h(384,16): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+  (compiling source file 'Project.cpp')
+  
 C:\Users\ahmedmohamedc45\source\repos\Project\Project\clsInputValidate.h(101,16): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
   (compiling source file 'Project.cpp')
   
 C:\Users\ahmedmohamedc45\source\repos\Project\Project\clsInputValidate.h(105,26): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
   (compiling source file 'Project.cpp')
   
+C:\Users\ahmedmohamedc45\source\repos\Project\Project\clsUtil.h(64,5): warning C4102: 'defualt': unreferenced label
+  (compiling source file 'Project.cpp')
+  
+C:\Users\ahmedmohamedc45\source\repos\Project\Project\Project.cpp(50,56): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
   Project.vcxproj -> C:\Users\ahmedmohamedc45\source\repos\Project\x64\Debug\Project.exe
