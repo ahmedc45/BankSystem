@@ -23,14 +23,17 @@ C:\Users\ahmedmohamedc45\source\repos\Project\Project\clsBankClient.h(31,65): wa
 C:\Users\ahmedmohamedc45\source\repos\Project\Project\clsBankClient.h(384,16): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
   (compiling source file 'Project.cpp')
   
-C:\Users\ahmedmohamedc45\source\repos\Project\Project\clsInputValidate.h(101,16): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\ahmedmohamedc45\source\repos\Project\Project\clsInputValidate.h(115,16): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
   (compiling source file 'Project.cpp')
   
-C:\Users\ahmedmohamedc45\source\repos\Project\Project\clsInputValidate.h(105,26): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\ahmedmohamedc45\source\repos\Project\Project\clsInputValidate.h(119,26): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
   (compiling source file 'Project.cpp')
   
-C:\Users\ahmedmohamedc45\source\repos\Project\Project\clsUtil.h(64,5): warning C4102: 'defualt': unreferenced label
+C:\Users\ahmedmohamedc45\source\repos\Project\Project\clsAddNewClientScreen.h(30,66): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
   (compiling source file 'Project.cpp')
   
-C:\Users\ahmedmohamedc45\source\repos\Project\Project\Project.cpp(50,56): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\ahmedmohamedc45\source\repos\Project\Project\clsUpdateDataClient.h(47,66): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  (compiling source file 'Project.cpp')
+  
+C:\Users\ahmedmohamedc45\source\repos\Project\Project\clsBankClient.h(330,1): warning C4715: 'clsBankClient::Save': not all control paths return a value
   Project.vcxproj -> C:\Users\ahmedmohamedc45\source\repos\Project\x64\Debug\Project.exe
