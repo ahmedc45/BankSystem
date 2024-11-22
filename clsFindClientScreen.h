@@ -26,22 +26,35 @@ private:
     }
 
 public:
-    static void FindClientScreen()
+
+    static void ShowFindClientScreen()
     {
-        string Find;
-        cout << "Please enter an account number: ";
-        Find = clsInputValidate::ReadString();
-        while (!clsBankClient::IsClientExist(Find))
+
+        _DrawScreenHeader("\tFind Client Screen");
+
+        string AccountNumber;
+        cout << "\nPlease Enter Account Number: ";
+        AccountNumber = clsInputValidate::ReadString();
+        while (!clsBankClient::IsClientExist(AccountNumber))
         {
-            string Find;
-            cout << "Please enter an account number: ";
-            Find = clsInputValidate::ReadString();
+            cout << "\nAccount number is not found, choose another one: ";
+            AccountNumber = clsInputValidate::ReadString();
         }
 
-        clsBankClient Client = clsBankClient::Find(Find);
-        Client.Print();
-    }
-    
+        clsBankClient Client1 = clsBankClient::Find(AccountNumber);
 
+        if (!Client1.IsEmpty())
+        {
+            cout << "\nClient Found :-)\n";
+        }
+        else
+        {
+            cout << "\nClient Was not Found :-(\n";
+        }
+
+        _PrintClient(Client1);
+
+    }
 
 };
+

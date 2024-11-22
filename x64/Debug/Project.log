@@ -23,6 +23,12 @@ C:\Users\ahmedmohamedc45\source\repos\Project\Project\clsBankClient.h(31,65): wa
 C:\Users\ahmedmohamedc45\source\repos\Project\Project\clsBankClient.h(384,16): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
   (compiling source file 'Project.cpp')
   
+C:\Users\ahmedmohamedc45\source\repos\Project\Project\clsBankClient.h(390,28): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+  (compiling source file 'Project.cpp')
+  
+C:\Users\ahmedmohamedc45\source\repos\Project\Project\clsBankClient.h(396,28): warning C4244: '-=': conversion from 'double' to 'float', possible loss of data
+  (compiling source file 'Project.cpp')
+  
 C:\Users\ahmedmohamedc45\source\repos\Project\Project\clsInputValidate.h(115,16): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
   (compiling source file 'Project.cpp')
   

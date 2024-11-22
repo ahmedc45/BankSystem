@@ -385,5 +385,15 @@ public:
 
     }
 
-
+    void Deposit(double amount)
+    {
+        _AccountBalance += amount;
+        Save();
+    }
+    
+    void Withdraw(double amount)
+    {
+        _AccountBalance -= amount;
+        Save();
+    }
 };
