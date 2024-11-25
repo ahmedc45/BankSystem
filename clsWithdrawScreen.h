@@ -1,13 +1,14 @@
 #pragma once
+
 #include <iostream>
+#include "clsScreen.h"
 #include "clsBankClient.h"
 #include "clsInputValidate.h"
-#include "clsScreen.h"
-using namespace std;
 
 class clsWithdrawScreen : protected clsScreen
 {
 private:
+
     static void _PrintClient(clsBankClient Client)
     {
         cout << "\nClient Card:";
@@ -24,44 +25,54 @@ private:
 
     }
 
+    static string _ReadAccountNumber()
+    {
+        string AccountNumber = "";
+        cout << "\nPlease enter AccountNumber? ";
+        cin >> AccountNumber;
+        return AccountNumber;
+    }
+
 public:
-    
 
     static void ShowWithdrawScreen()
     {
-        _DrawScreenHeader("Withdraw Screen");
-        string Choose;
-        cout << "Please enter AccountNumber: ";
-        Choose = clsInputValidate::ReadString();
+        _DrawScreenHeader("\t   Withdraw Screen");
 
-        while (!clsBankClient::IsClientExist(Choose))
+        string AccountNumber = _ReadAccountNumber();
+
+
+        while (!clsBankClient::IsClientExist(AccountNumber))
         {
-            cout << "Please enter AccountNumber: ";
-            Choose = clsInputValidate::ReadString();
+            cout << "\nClient with [" << AccountNumber << "] does not exist.\n";
+            AccountNumber = _ReadAccountNumber();
         }
 
-        clsBankClient Client = clsBankClient::Find(Choose);
-        _PrintClient(Client);
+        clsBankClient Client1 = clsBankClient::Find(AccountNumber);
+        _PrintClient(Client1);
+
 
         double Amount = 0;
-        cout << "\nPlease enter deposit amount? ";
+        cout << "\nPlease enter Withdraw amount? ";
         Amount = clsInputValidate::ReadDblNumber();
 
         cout << "\nAre you sure you want to perform this transaction? ";
         char Answer = 'n';
         cin >> Answer;
 
-        if (Answer == 'y' || Answer == 'Y')
+        if (Answer == 'Y' || Answer == 'y')
         {
-            if (Amount < Client.AccountBalance)
+            if (Client1.Withdraw(Amount))
             {
-                Client.Withdraw(Amount);
-                cout << "\nAmount Deposited Successfully.\n";
-                cout << "\nNew Balance Is: " << Client.AccountBalance;
+                cout << "\nAmount Withdrew Successfully.\n";
+                cout << "\nNew Balance Is: " << Client1.AccountBalance;
             }
             else
             {
-                cout << "This Amount is big";
+                cout << "\nCannot withdraw, Insuffecient Balance!\n";
+                cout << "\nAmout to withdraw is: " << Amount;
+                cout << "\nYour Balance is: " << Client1.AccountBalance;
+
             }
         }
         else
@@ -70,5 +81,6 @@ public:
         }
 
     }
+
 };
 
