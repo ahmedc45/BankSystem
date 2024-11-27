@@ -223,10 +223,8 @@ public:
 
     static clsBankClient Find(string AccountNumber)
     {
-
-
         fstream MyFile;
-        MyFile.open("Clients.txt", ios::in);//read Mode
+        MyFile.open("Clients.txt", ios::in); //read Mode
 
         if (MyFile.is_open())
         {
@@ -251,9 +249,6 @@ public:
 
     static clsBankClient Find(string AccountNumber, string PinCode)
     {
-
-
-
         fstream MyFile;
         MyFile.open("Clients.txt", ios::in);//read Mode
 
