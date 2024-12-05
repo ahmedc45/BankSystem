@@ -17,22 +17,24 @@ C:\Users\ahmedmohamedc45\source\repos\Project\Project\clsString.h(328,30): warni
 C:\Users\ahmedmohamedc45\source\repos\Project\Project\clsString.h(376,22): warning C4267: 'initializing': conversion from 'size_t' to 'short', possible loss of data
   (compiling source file 'Project.cpp')
   
-C:\Users\ahmedmohamedc45\source\repos\Project\Project\clsBankClient.h(31,65): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\ahmedmohamedc45\source\repos\Project\Project\clsUser.h(187,12): warning C4240: nonstandard extension used: access to 'clsUser::stLoginRegisterRecord' now defined to be 'public', previously it was defined to be 'private'
   (compiling source file 'Project.cpp')
-  
-C:\Users\ahmedmohamedc45\source\repos\Project\Project\clsBankClient.h(379,16): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
-  (compiling source file 'Project.cpp')
-  
-C:\Users\ahmedmohamedc45\source\repos\Project\Project\clsBankClient.h(385,28): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
-  (compiling source file 'Project.cpp')
-  
-C:\Users\ahmedmohamedc45\source\repos\Project\Project\clsBankClient.h(397,32): warning C4244: '-=': conversion from 'double' to 'float', possible loss of data
-  (compiling source file 'Project.cpp')
+      C:\Users\ahmedmohamedc45\source\repos\Project\Project\clsUser.h(23,12):
+      see declaration of 'clsUser::stLoginRegisterRecord'
   
 C:\Users\ahmedmohamedc45\source\repos\Project\Project\clsInputValidate.h(115,16): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
   (compiling source file 'Project.cpp')
   
 C:\Users\ahmedmohamedc45\source\repos\Project\Project\clsInputValidate.h(119,26): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  (compiling source file 'Project.cpp')
+  
+C:\Users\ahmedmohamedc45\source\repos\Project\Project\clsBankClient.h(28,65): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  (compiling source file 'Project.cpp')
+  
+C:\Users\ahmedmohamedc45\source\repos\Project\Project\clsBankClient.h(389,28): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+  (compiling source file 'Project.cpp')
+  
+C:\Users\ahmedmohamedc45\source\repos\Project\Project\clsBankClient.h(402,32): warning C4244: '-=': conversion from 'double' to 'float', possible loss of data
   (compiling source file 'Project.cpp')
   
 C:\Users\ahmedmohamedc45\source\repos\Project\Project\clsAddNewClientScreen.h(30,66): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
@@ -47,7 +49,13 @@ C:\Users\ahmedmohamedc45\source\repos\Project\Project\clsUtil.h(64,5): warning C
 C:\Users\ahmedmohamedc45\source\repos\Project\Project\clsTotalBalancesScreen.h(57,82): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
   (compiling source file 'Project.cpp')
   
-C:\Users\ahmedmohamedc45\source\repos\Project\Project\clsBankClient.h(325,1): warning C4715: 'clsBankClient::Save': not all control paths return a value
-C:\Users\ahmedmohamedc45\source\repos\Project\Project\clsBankClient.h(401,1): warning C4715: 'clsBankClient::Withdraw': not all control paths return a value
-C:\Users\ahmedmohamedc45\source\repos\Project\Project\clsUser.h(309,1): warning C4715: 'clsUser::Save': not all control paths return a value
+C:\Users\ahmedmohamedc45\source\repos\Project\Project\clsTransferScreen.h(42,51): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  (compiling source file 'Project.cpp')
+  
+C:\Users\ahmedmohamedc45\source\repos\Project\Project\clsTransferScreen.h(47,53): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  (compiling source file 'Project.cpp')
+  
+C:\Users\ahmedmohamedc45\source\repos\Project\Project\clsBankClient.h(344,1): warning C4715: 'clsBankClient::Save': not all control paths return a value
+C:\Users\ahmedmohamedc45\source\repos\Project\Project\clsBankClient.h(406,1): warning C4715: 'clsBankClient::Withdraw': not all control paths return a value
+C:\Users\ahmedmohamedc45\source\repos\Project\Project\clsUser.h(345,1): warning C4715: 'clsUser::Save': not all control paths return a value
   Project.vcxproj -> C:\Users\ahmedmohamedc45\source\repos\Project\x64\Debug\Project.exe

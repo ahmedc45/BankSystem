@@ -14,13 +14,10 @@ private:
     enum enMode { EmptyMode = 0, UpdateMode = 1, AddNewMode = 2 };
     enMode _Mode;
 
-
     string _AccountNumber;
     string _PinCode;
     float _AccountBalance;
     bool _MarkedForDelete = false;
-
-
 
     static clsBankClient _ConvertLinetoClientObject(string Line, string Seperator = "#//#")
     {
@@ -152,6 +149,38 @@ private:
         return clsBankClient(enMode::EmptyMode, "", "", "", "", "", "", 0);
     }
 
+    string _PrepareTransferLogRecord(float Amount, clsBankClient DestinationClient,
+        string UserName, string Seperator = "#//#")
+    {
+        string TransferLogRecord = "";
+        TransferLogRecord += clsDate::GetSystemDateTimeString() + Seperator;
+        TransferLogRecord += AccountNumber() + Seperator;
+        TransferLogRecord += DestinationClient.AccountNumber() + Seperator;
+        TransferLogRecord += to_string(Amount) + Seperator;
+        TransferLogRecord += to_string(AccountBalance) + Seperator;
+        TransferLogRecord += to_string(DestinationClient.AccountBalance) + Seperator;
+        TransferLogRecord += UserName;
+        return TransferLogRecord;
+    }
+
+    void _RegisterTransferLog(float Amount, clsBankClient DestinationClient, string UserName)
+    {
+
+        string stDataLine = _PrepareTransferLogRecord(Amount, DestinationClient, UserName);
+
+        fstream MyFile;
+        MyFile.open("TransferLog.txt", ios::out | ios::app);
+
+        if (MyFile.is_open())
+        {
+
+            MyFile << stDataLine << endl;
+
+            MyFile.close();
+        }
+
+    }
+
 public:
 
 
@@ -205,26 +234,13 @@ public:
     }
     __declspec(property(get = GetAccountBalance, put = SetAccountBalance)) float AccountBalance;
 
-    void Print()
-    {
-        cout << "\nClient Card:";
-        cout << "\n___________________";
-        cout << "\nFirstName   : " << FirstName;
-        cout << "\nLastName    : " << LastName;
-        cout << "\nFull Name   : " << FullName();
-        cout << "\nEmail       : " << Email;
-        cout << "\nPhone       : " << Phone;
-        cout << "\nAcc. Number : " << _AccountNumber;
-        cout << "\nPassword    : " << _PinCode;
-        cout << "\nBalance     : " << _AccountBalance;
-        cout << "\n___________________\n";
-
-    }
 
     static clsBankClient Find(string AccountNumber)
     {
+
+
         fstream MyFile;
-        MyFile.open("Clients.txt", ios::in); //read Mode
+        MyFile.open("Clients.txt", ios::in);//read Mode
 
         if (MyFile.is_open())
         {
@@ -249,6 +265,9 @@ public:
 
     static clsBankClient Find(string AccountNumber, string PinCode)
     {
+
+
+
         fstream MyFile;
         MyFile.open("Clients.txt", ios::in);//read Mode
 
@@ -364,7 +383,29 @@ public:
         return _LoadClientsDataFromFile();
     }
 
-    static float GetTotalBalances()
+
+    void Deposit(double Amount)
+    {
+        _AccountBalance += Amount;
+        Save();
+    }
+
+
+    bool Withdraw(double Amount)
+    {
+        if (Amount > _AccountBalance)
+        {
+            return false;
+        }
+        else
+        {
+            _AccountBalance -= Amount;
+            Save();
+        }
+
+    }
+
+    static double GetTotalBalances()
     {
         vector <clsBankClient> vClients = clsBankClient::GetClientsList();
 
@@ -377,26 +418,22 @@ public:
         }
 
         return TotalBalances;
-
     }
 
-    void Deposit(double amount)
+    bool Transfer(float Amount, clsBankClient& DestinationClient, string UserName)
     {
-        _AccountBalance += amount;
-        Save();
-    }
-    
-    bool Withdraw(double amount)
-    {
-        if (amount > _AccountBalance)
+        if (Amount > AccountBalance)
         {
             return false;
         }
-        else
-        {
-            _AccountBalance -= amount;
-            Save();
-        }
-        
+
+        Withdraw(Amount);
+        DestinationClient.Deposit(Amount);
+        _RegisterTransferLog(Amount, DestinationClient, UserName);
+
+        return true;
     }
+
+
 };
+
