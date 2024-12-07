@@ -41,7 +41,7 @@ private:
 
             cout << "Enter Password? ";
             cin >> Password;
-
+            
             CurrentUser = clsUser::Find(Username, Password);
 
             LoginFaild = CurrentUser.IsEmpty();

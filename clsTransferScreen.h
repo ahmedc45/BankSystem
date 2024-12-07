@@ -5,6 +5,7 @@
 #include "clsBankClient.h"
 #include "clsInputValidate.h"
 
+
 class clsTransferScreen :protected clsScreen
 {
 
