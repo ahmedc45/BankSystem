@@ -69,7 +69,16 @@ C:\Users\ahmedmohamedc45\source\repos\Project\Project\clsTransferScreen.h(43,51)
 C:\Users\ahmedmohamedc45\source\repos\Project\Project\clsTransferScreen.h(48,53): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
   (compiling source file 'Project.cpp')
   
+C:\Users\ahmedmohamedc45\source\repos\Project\Project\clsCurrency.h(27,17): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  (compiling source file 'Project.cpp')
+  
+C:\Users\ahmedmohamedc45\source\repos\Project\Project\clsUpdateCurrencyRateScreen.h(17,52): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  (compiling source file 'Project.cpp')
+  
+C:\Users\ahmedmohamedc45\source\repos\Project\Project\clsCurrencyCalculatorScreen.h(17,51): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  (compiling source file 'Project.cpp')
+  
 C:\Users\ahmedmohamedc45\source\repos\Project\Project\clsBankClient.h(376,1): warning C4715: 'clsBankClient::Save': not all control paths return a value
-C:\Users\ahmedmohamedc45\source\repos\Project\Project\clsBankClient.h(438,1): warning C4715: 'clsBankClient::Withdraw': not all control paths return a value
 C:\Users\ahmedmohamedc45\source\repos\Project\Project\clsUser.h(360,1): warning C4715: 'clsUser::Save': not all control paths return a value
+C:\Users\ahmedmohamedc45\source\repos\Project\Project\clsBankClient.h(438,1): warning C4715: 'clsBankClient::Withdraw': not all control paths return a value
   Project.vcxproj -> C:\Users\ahmedmohamedc45\source\repos\Project\x64\Debug\Project.exe
